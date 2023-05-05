@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Rubik:wght@300;400;500;600;700;800&display=swap');
+body{
+    overflow: hidden;
+}
+main{
+    --google : #1a73e8;
+    --youtube:#ff0000;
+    --spotify:#1ed760;
+    --github:#dd44ff;
+    --twitter:#1d9bf0;
+    --facebook:#1877f2;
+    --instagram:#feda75;
+}
+.app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(25, 25, 25);
+    color: white;
+    transition: 0.4s;
+}
+.google{
+    background-color: var(--google);
+}
+.youtube{
+    background-color: var(--youtube);
+}
+.spotify{
+    background-color: var(--spotify);
+    color:black;
+}
+.github{
+    background-color: black;
+    color: var(--github);
+}
+.instagram{
+    background-color: var(--instagram);
+    color: black;
+}
+.twitter{
+    background-color: var(--twitter);
+}
+.facebook{
+    background-color: black;
+    color: var(--facebook);
+}
+.writeArea{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#date{
+    font-family: 'Rubik';
+    margin: 0%;
+    font-weight: 400;
+}
+input{
+    font-family: 'Rubik';
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    resize: none;
+    overflow-y: hidden;
+    width: 100%;
+    padding: 1em;
+    direction: rtl;
+}
+.spotify > div > input , .instagram > div > input{
+    font-weight: 500;
+    color:black
+}
+.searchIcon{
+    height: 2em;
+    width: 2em;
+    transition: 0.2s;
+    opacity: 0%;
+}
