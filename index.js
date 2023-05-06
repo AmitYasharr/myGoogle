@@ -19,6 +19,7 @@ document.addEventListener('keypress',(e)=>{
         let dataSet = textArea.value.split(" ")
         let theUrl = ""
         if(mainDiv.classList[1] == "google"){
+            dataSet = dataSet.slice(1)
             theUrl = dataSet.join("+").toLowerCase();
             window.location.href = `https://www.google.com/search?q=${theUrl}`
         }
@@ -70,25 +71,35 @@ const update = () =>{
         mainDiv.className = "app";  
         textArea.blur();  
     }
-    else if(textArea.value.split(" ")[0] == "y:" || textArea.value.toLowerCase() == "youtube"){
+    else if(textArea.value.split(" ")[0] == "y:" ||
+     textArea.value.toLowerCase() == "youtube"||
+     textArea.value.split(" ")[0] == "י:"||
+     textArea.value.toLowerCase() == "יוטיוב"){
         mainDiv.classList.replace("google","youtube")
     }
-    else if(textArea.value.split(" ")[0] == "s:" || textArea.value.toLowerCase() == "spotify"){
+    else if(textArea.value.split(" ")[0] == "s:" ||
+     textArea.value.toLowerCase() == "spotify"||
+     textArea.value.split(" ")[0] == "ס:"||
+     textArea.value.toLowerCase() == "ספוטיפי"){
         mainDiv.classList.replace("google","spotify")
     }
-    else if(textArea.value.toLowerCase() == "github"){
+    else if(textArea.value.toLowerCase() == "github"||
+    textArea.value.toLowerCase() == "גיטהב"){
         mainDiv.classList.replace("google","github")
     }
-    else if(textArea.value.toLowerCase() == "twitter"){
+    else if(textArea.value.toLowerCase() == "twitter"||
+    textArea.value.toLowerCase() == "טוויטר"){
         mainDiv.classList.replace("google","twitter")
     }
-    else if(textArea.value.toLowerCase() == "facebook"){
+    else if(textArea.value.toLowerCase() == "facebook"||
+    textArea.value.toLowerCase() == "פייסבוק"){
         mainDiv.classList.replace("google","facebook")
     }
-    else if(textArea.value.toLowerCase() == "instagram"){
+    else if(textArea.value.toLowerCase() == "instagram"||
+    textArea.value.toLowerCase() == "אינסטגרם"){
         mainDiv.classList.replace("google","instagram")
     }
-    else if(!clockMode){
+    else if(!clockMode || textArea.value.split(" ")[0] == "g:"){
         mainDiv.className = "app google";   
     }
     if(clockMode){setInterval(setMainTextAsTime(),1000)}

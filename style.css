@@ -77,7 +77,6 @@ input{
     overflow-y: hidden;
     width: 100%;
     padding: 1em;
-    direction: rtl;
 }
 .spotify > div > input , .instagram > div > input{
     font-weight: 500;
