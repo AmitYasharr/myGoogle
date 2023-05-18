@@ -19,7 +19,10 @@ document.addEventListener('keypress',(e)=>{
         let dataSet = textArea.value.split(" ")
         let theUrl = ""
         if(mainDiv.classList[1] == "google"){
-            dataSet = dataSet.slice(1)
+            console.log(dataSet.slice(0))
+            if(dataSet.slice(0)[0] == 'g:' || dataSet.slice(0)[0] == 'G:'){
+                dataSet = dataSet.slice(1)
+            }
             theUrl = dataSet.join("+").toLowerCase();
             window.location.href = `https://www.google.com/search?q=${theUrl}`
         }
